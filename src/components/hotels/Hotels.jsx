@@ -39,7 +39,7 @@ const Hotels = () => {
 
   return (
     <Container>
-      <p className="font-medium text-2xl text-neutral-700">
+      <p className="font-medium text-2xl text-neutral-700 dark:text-white">
         {activeCategory.length <= 0 ? "Top Hotels" : activeCategory}
       </p>
 

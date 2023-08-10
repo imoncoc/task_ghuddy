@@ -1,5 +1,5 @@
 import { faGem, faHeart } from "@fortawesome/free-regular-svg-icons";
-import { addToDb, getShoppingCart, isInCart } from "../../shared/fakeDb";
+import { addToDb, getShoppingCart } from "../../shared/fakeDb";
 
 import {
   faHouse,
@@ -40,7 +40,7 @@ const HotelsBox = ({hotelData}) => {
 
 
   return (
-    <div className="shadow-xl my-8 bg-white rounded-xl h-[442px] w-[260px]">
+    <div className="shadow-xl my-8 bg-white rounded-xl h-[442px] w-[260px] dark:bg-slate-800 dark:text-white">
       <div>
         {/* <img className="rounded-t-xl" src={thumb_image} alt="" /> */}
 
@@ -59,13 +59,13 @@ const HotelsBox = ({hotelData}) => {
                 <img className="rounded-t-xl h-60 w-full" src={image} alt="" />
                 <div className="absolute top-0 right-0 h-16 w-16 flex items-center justify-center  text-white rounded-full">
                   <FontAwesomeIcon
-                    onClick={()=> handleAddData(rpredi)}
+                    onClick={() => handleAddData(rpredi)}
                     className="text-2xl"
                     icon={faHeart}
                   />
                 </div>
                 <div className="absolute top-5 left-0 px-2 py-1 bg-red-500 text-white ">
-                  <div>
+                  <div className="text-xs">
                     <FontAwesomeIcon icon={faGem} />
                     <span className="">
                       {" "}
@@ -84,10 +84,10 @@ const HotelsBox = ({hotelData}) => {
 
       <div className="m-2 h-48 relative">
         <div>
-          <div className="flex justify-between gap-5 ">
-            <p className="font-medium mb-2">{property_name}</p>
+          <div className="flex justify-between gap-5 dark:text-white">
+            <p className="font-medium mb-2 dark:text-white">{property_name}</p>
             <div className="flex items-start">
-              <div className="flex items-center text-sm">
+              <div className="flex items-center text-sm dark:text-white">
                 <FontAwesomeIcon
                   className="mr-1 text-yellow-400"
                   icon={faStar}
@@ -96,22 +96,24 @@ const HotelsBox = ({hotelData}) => {
               </div>
             </div>
           </div>
-          <div className="text-sm text-neutral-700 my-1">
+          <div className="text-sm text-neutral-700 my-1 dark:text-white">
             <FontAwesomeIcon className="mr-3" icon={faLocationDot} />
             {short_address}
           </div>
-          <div className="text-sm text-neutral-700">
+          <div className="text-sm text-neutral-700 dark:text-white">
             <FontAwesomeIcon className="mr-2" icon={faHouse} />
             {display_facilities[0].name}, {display_facilities[1].name},{" "}
             {display_facilities[2].name}.
           </div>
         </div>
 
-        <div className="text-center absolute inset-x-0 bottom-0">
-          <p className="text-center text-xs font-normal text-neutral-700">
+        <div className="text-center absolute inset-x-0 bottom-0 dark:text-white">
+          <p className="text-center text-xs font-normal text-neutral-700 dark:text-white">
             Checkout Price:
           </p>{" "}
-          <span className=" text-neutral-700 font-medium">{red_price} BDT</span>{" "}
+          <span className=" text-neutral-700 font-medium dark:text-white">
+            {red_price} BDT
+          </span>{" "}
           <span className="text-neutral-400 line-through font-medium">
             {" "}
             {black_price} BDT{" "}
