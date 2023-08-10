@@ -44,6 +44,7 @@ const Hotels = () => {
       </p>
 
       <Swiper
+      id="customSwiper"
         spaceBetween={50}
         slidesPerView={
           windowWidth <= 576
@@ -75,6 +76,7 @@ const Hotels = () => {
             <SwiperSlide key={item.rpredi}>
               <HotelsBox hotelData={item}></HotelsBox>
             </SwiperSlide>
+            // <SwiperSlide key={item.name}>Slide 1</SwiperSlide>
           ))
         )}
       </Swiper>

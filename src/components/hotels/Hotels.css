@@ -1,38 +1,50 @@
-.swiper-button-prev,
-.swiper-button-next{
+#customSwiper > div.swiper-button-prev,
+#customSwiper > div.swiper-button-next{
         top: var(--swiper-navigation-top-offset, 2%) !important;
         
 }
 
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after{
+#customSwiper > div.swiper-button-next:after,
+#customSwiper > div.swiper-rtl .swiper-button-prev:after{
     content: 'arrow' !important;
 }
 
-.swiper-button-next {
+#customSwiper > div.swiper-button-next {
     background-image: url('/public/right-arrow.png');
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
 }
 
-.swiper-button-next::after {
+#customSwiper > div.swiper-button-next::after {
     display: none;
 }
 
-.swiper-button-prev {
+#customSwiper > div.swiper-button-prev {
     background-image: url('/public/arrow.png');
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
 }
 
-.swiper-button-prev::after {
+#customSwiper > div.swiper-button-prev::after {
     display: none;
 }
 
+/* #customSwiper {
 
-/* .swiper-button-prev:after,
+} */
+
+
+
+
+
+
+
+
+
+
+.swiper-button-prev:after,
 .swiper-button-next:after{
     font-size: small !important;
     padding: 6px;
@@ -75,4 +87,4 @@
 
 .swiper-pagination-bullet-active{
     background-color: white !important;
-} */
+}
