@@ -10,11 +10,11 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <div className='bg-neutral-200'>
+      <div className="bg-neutral-200 dark:bg-slate-900 dark:text-white">
         <Outlet></Outlet>
         <Hotels></Hotels>
       </div>
-        <Footer></Footer>
+      <Footer></Footer>
     </>
   );
 }
