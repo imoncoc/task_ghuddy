@@ -1,5 +1,5 @@
-import { faGem, faHeart } from "@fortawesome/free-regular-svg-icons";
-import { addToDb, getShoppingCart } from "../../shared/fakeDb";
+import { faGem, faHeart, } from "@fortawesome/free-regular-svg-icons";
+import { addToDb, getShoppingCart, removeFromDb, isInCart } from "../../shared/fakeDb";
 
 import {
   faHouse,
@@ -14,6 +14,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { useState } from "react";
 
 
 
@@ -30,17 +31,23 @@ const HotelsBox = ({hotelData}) => {
       images,
       rpredi
     } = hotelData;
+    const [isItemInCart, setIsItemInCart] = useState(isInCart(rpredi));
 
     // console.log(hotelData)
 
-    const handleAddData = (id) =>{
-      console.log(getShoppingCart());
-      addToDb(id);
-    }
+    const handleAddData = (id) => {
+      if (isInCart(id)) {
+        removeFromDb(id);
+        setIsItemInCart(false); // Item removed from cart
+      } else {
+        addToDb(id);
+        setIsItemInCart(true); // Item added to cart
+      }
+    };
 
 
   return (
-    <div className="shadow-xl my-8 bg-white rounded-xl h-[442px] w-[260px] dark:bg-slate-800 dark:text-white">
+    <div className="shadow-xl hover:shadow-2xl my-8 bg-white rounded-xl h-[442px] w-[260px] dark:bg-slate-800 dark:text-white dark:hover:shadow-white">
       <div>
         {/* <img className="rounded-t-xl" src={thumb_image} alt="" /> */}
 
@@ -60,7 +67,9 @@ const HotelsBox = ({hotelData}) => {
                 <div className="absolute top-0 right-0 h-16 w-16 flex items-center justify-center  text-white rounded-full">
                   <FontAwesomeIcon
                     onClick={() => handleAddData(rpredi)}
-                    className="text-2xl"
+                    className={`text-2xl hover:animate-pulse cursor-pointer ${
+                      isItemInCart ? "text-red-500" : ""
+                    }`}
                     icon={faHeart}
                   />
                 </div>

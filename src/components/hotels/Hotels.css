@@ -1,3 +1,8 @@
+.shadow-white{
+    box-shadow: 1px 2px 2px 1px rgba(253, 253, 253, 0.1);
+}
+
+
 #customSwiper > div.swiper-button-prev,
 #customSwiper > div.swiper-button-next{
         top: var(--swiper-navigation-top-offset, 2%) !important;
@@ -10,7 +15,8 @@
 }
 
 #customSwiper > div.swiper-button-next {
-    background-image: url('/public/right-arrow.png');
+    /* background-color: #14b8a6; */
+    background-image: url('/public/right-arrow-teal.png');
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
@@ -21,7 +27,7 @@
 }
 
 #customSwiper > div.swiper-button-prev {
-    background-image: url('/public/arrow.png');
+    background-image: url('/public/left-arrow-teal.png');
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
