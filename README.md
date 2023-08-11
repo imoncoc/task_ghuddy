@@ -1,4 +1,4 @@
-# Property Cards App
+# Ghuddy App
 
 This is a simple React.js single-page application that displays property cards fetched from an API based on the property type filter.
 
@@ -11,7 +11,9 @@ The data for the property cards is retrieved from an API that takes the `propert
 - **Case 3**: Clicking the Hotel button again deselects it, removes `propertyType` from the API request, and refreshes the cards.
 - **Case 4**: Clicking the Holiday Home button deselects Hotel, selects Holiday Home, adds `propertyType=Holiday%20Home` to the API request, and reloads the cards.
 
-The application also includes pagination.
+### Bonus
+- **Case 5**: User can easily select `darkMode` field. Then all text and background become user friendly to dark theme. Not implemented in localStorage for that if you reload the page may occurs an issue.
+- **Case 6**: On Hotels one can select if you love the hotel. This features implement in `localStorage` so if you reload your selected hotel will remain as red before. 
 
 ## Technology Stack
 
@@ -29,7 +31,7 @@ The application also includes pagination.
 
 ## Deployment
 
-The application is deployed using Netlify and can be accessed [here](https://your-netlify-app-url.netlify.app).
+The application is deployed using Netlify and can be accessed [here](https://ghuddyim.netlify.app/).
 
 ## Usage
 
@@ -39,7 +41,3 @@ The application is deployed using Netlify and can be accessed [here](https://you
 ## About
 
 This project was created for the Ghuddy assignment.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
