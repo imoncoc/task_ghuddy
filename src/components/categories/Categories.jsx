@@ -50,7 +50,8 @@ const Categories = () => {
 
   return (
     <Container>
-      <div className="pt-16 flex flex-row items-center justify-between overflow-x-auto">
+      {/* <div className="pt-16 flex flex-row items-center justify-between overflow-x-auto"> */}
+      <div className="pt-16">
         <Swiper
           spaceBetween={50}
           slidesPerView={windowWidth <= 640 ? 5 : windowWidth <= 992 ? 6 : 8}

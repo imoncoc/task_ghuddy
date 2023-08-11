@@ -4,5 +4,12 @@
 }
 
 .not-active{
-    opacity: 0.75;
+    opacity: 0.50 !important;
 }
+
+/* @media (max-width: 768px) {
+    .some-element {
+        font-size: 14px;
+        color: #666;
+    }
+} */
