@@ -13,7 +13,7 @@ The data for the property cards is retrieved from an API that takes the `propert
 
 ### Bonus
 - **Case 5**: User can easily select `darkMode` field. Then all text and background become user friendly to dark theme. Not implemented in localStorage for that if you reload the page may occurs an issue.
-- **Case 6**: On Hotels one can select if you love the hotel. This features implement in `localStorage` so if you reload your selected hotel will remain as red before. 
+- **Case 6**: On Hotels one can select if you love the hotel. This features implement in `localStorage` so if you reload your selected hotel will remain as red before, also an animation added
 
 ## Technology Stack
 
@@ -32,7 +32,7 @@ The data for the property cards is retrieved from an API that takes the `propert
 
 ## Deployment
 
-The application is deployed using Netlify and can be accessed [here](https://ghuddyim.netlify.app/).
+The application is deployed using Netlify and can be accessed [here](https://ghuddy-im.netlify.app/).
 
 ## Usage
 
