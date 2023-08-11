@@ -121,7 +121,7 @@ const HotelsBox = ({hotelData}) => {
             Checkout Price:
           </p>{" "}
           <span className=" text-neutral-700 font-medium dark:text-white">
-            {red_price} BDT
+            {Math.ceil(red_price)} BDT
           </span>{" "}
           <span className="text-neutral-400 line-through font-medium">
             {" "}
