@@ -25,7 +25,11 @@ const Navbar = () => {
       <div className="py-4 border-b-[1px]">
         <Container>
           <div className="flex items-center justify-between">
-            <img className="w-20" src="/public/ghuddy.jpg" alt="" />
+            <img
+              className="w-20"
+              src="https://i.ibb.co/10Dvygq/ghuddy.jpg"
+              alt=""
+            />
             {/* Dark Mode Start*/}
             <div>
               <div className="relative inline-block w-10 mr-2  align-middle select-none transition duration-200 ease-in">
@@ -42,7 +46,10 @@ const Navbar = () => {
                   className="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
                 ></label>
               </div>
-              <label htmlFor="toggle" className="text-xs text-gray-700 dark:text-white">
+              <label
+                htmlFor="toggle"
+                className="text-xs text-gray-700 dark:text-white"
+              >
                 Toggle Dark Mode
               </label>
             </div>
