@@ -17,14 +17,15 @@ The data for the property cards is retrieved from an API that takes the `propert
 
 ## Technology Stack
 
-- React.js
+- React.js(Vite)
 - Tailwind CSS
+- Swiper.js (Carousel)
 - GitHub (Code Hosting)
 - Netlify (Hosting)
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/yourusername/property-cards-app.git`
+1. Clone the repository: `git clone https://github.com/imoncoc/task_ghuddy.git`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm start`
 4. Open your browser and navigate to: `http://localhost:3000`
